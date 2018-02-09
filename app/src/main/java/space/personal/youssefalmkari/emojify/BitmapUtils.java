@@ -19,9 +19,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * Created by Yose on 2/7/2018.
- */
 
 public class BitmapUtils {
 
@@ -37,6 +34,7 @@ public class BitmapUtils {
      */
     static Bitmap resamplePic(Context context, String imagePath) {
 
+        //TODO: Redo picture sampling to not rotate when taking a photo in portrait
         // Get device screen size information
         DisplayMetrics metrics = new DisplayMetrics();
         WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);

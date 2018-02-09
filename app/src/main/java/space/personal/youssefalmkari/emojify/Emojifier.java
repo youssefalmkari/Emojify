@@ -12,6 +12,8 @@ import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.face.Face;
 import com.google.android.gms.vision.face.FaceDetector;
 
+import timber.log.Timber;
+
 class Emojifier {
 
     private static final String LOG_TAG = Emojifier.class.getSimpleName();
@@ -73,9 +75,9 @@ class Emojifier {
 
     static public Emoji whichEmoji(Face face)
     {
-        Log.d(LOG_TAG, "CLASSIFICATIONS: isLeftEyeOpenProb" + face.getIsLeftEyeOpenProbability());
-        Log.d(LOG_TAG, "CLASSIFICATIONS: isRightRyeOpenProb" + face.getIsRightEyeOpenProbability());
-        Log.d(LOG_TAG, "CLASSIFICATIONS: isSmilingProb" + face.getIsSmilingProbability());
+        Timber.d("CLASSIFICATIONS: isLeftEyeOpenProb%s", face.getIsLeftEyeOpenProbability());
+        Timber.d("CLASSIFICATIONS: isRightRyeOpenProb%s", face.getIsRightEyeOpenProbability());
+        Timber.d("CLASSIFICATIONS: isSmilingProb%s", face.getIsSmilingProbability());
 
         // Get classifications
         boolean isLeftEyeOpen, isRightEyeOpen, isSmiling;
