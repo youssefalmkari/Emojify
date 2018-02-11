@@ -73,11 +73,8 @@ class Emojifier {
         return resultBitmap;
     }
 
-    static public Emoji whichEmoji(Face face)
+    private static Emoji whichEmoji(Face face)
     {
-        Timber.d("CLASSIFICATIONS: isLeftEyeOpenProb%s", face.getIsLeftEyeOpenProbability());
-        Timber.d("CLASSIFICATIONS: isRightRyeOpenProb%s", face.getIsRightEyeOpenProbability());
-        Timber.d("CLASSIFICATIONS: isSmilingProb%s", face.getIsSmilingProbability());
 
         // Get classifications
         boolean isLeftEyeOpen, isRightEyeOpen, isSmiling;

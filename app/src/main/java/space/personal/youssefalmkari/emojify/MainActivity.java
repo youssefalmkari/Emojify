@@ -68,18 +68,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Bind
         ButterKnife.bind(this);
-
-        // Timber
-        if (!BuildConfig.DEBUG) {
-            Timber.plant(new Timber.Tree() {
-                @Override
-                protected void log(int priority, String tag, String message, Throwable t) {
-                    // Do some logging
-                }
-            });
-        } else {
-            Timber.plant(new Timber.DebugTree());
-        }
     }
 
     /**
